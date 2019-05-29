@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  TagViewController.swift
 //  Todo
 //
 //  Created by Đặng Quang Hưng on 5/18/19.
@@ -8,13 +8,11 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class TagListViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
         // Do any additional setup after loading the view.
     }
-
-
 }
-
