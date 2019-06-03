@@ -10,7 +10,7 @@
 		B50B2AE7228FDC2F00C32F65 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50B2AE6228FDC2F00C32F65 /* Task.swift */; };
 		B50B2AEB228FDD2900C32F65 /* TodoDataSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50B2AEA228FDD2900C32F65 /* TodoDataSourceProtocol.swift */; };
 		B565AD0D228FDDE9001CAAB5 /* TodoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B565AD0C228FDDE9001CAAB5 /* TodoRepository.swift */; };
-		B565AD0F228FDF5D001CAAB5 /* TaskViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B565AD0E228FDF5D001CAAB5 /* TaskViewModel.swift */; };
+		B565AD0F228FDF5D001CAAB5 /* TaskListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B565AD0E228FDF5D001CAAB5 /* TaskListViewModel.swift */; };
 		B565AD11228FE040001CAAB5 /* MockTodoDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B565AD10228FE040001CAAB5 /* MockTodoDataSource.swift */; };
 		B588DB1F228FB4BC0066CDFE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B588DB1E228FB4BC0066CDFE /* AppDelegate.swift */; };
 		B588DB26228FB4BF0066CDFE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B588DB25228FB4BF0066CDFE /* Assets.xcassets */; };
@@ -33,7 +33,7 @@
 		B50B2AE6228FDC2F00C32F65 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		B50B2AEA228FDD2900C32F65 /* TodoDataSourceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoDataSourceProtocol.swift; sourceTree = "<group>"; };
 		B565AD0C228FDDE9001CAAB5 /* TodoRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoRepository.swift; sourceTree = "<group>"; };
-		B565AD0E228FDF5D001CAAB5 /* TaskViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewModel.swift; sourceTree = "<group>"; };
+		B565AD0E228FDF5D001CAAB5 /* TaskListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListViewModel.swift; sourceTree = "<group>"; };
 		B565AD10228FE040001CAAB5 /* MockTodoDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTodoDataSource.swift; sourceTree = "<group>"; };
 		B588DB1B228FB4BC0066CDFE /* Todo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Todo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B588DB1E228FB4BC0066CDFE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -199,7 +199,7 @@
 				B5CF0E4322A4C61800578D5F /* TaskListCoordinator.swift */,
 				B588DB4B228FBC490066CDFE /* TaskListViewController.swift */,
 				B588DB4C228FBC490066CDFE /* TaskListViewController.xib */,
-				B565AD0E228FDF5D001CAAB5 /* TaskViewModel.swift */,
+				B565AD0E228FDF5D001CAAB5 /* TaskListViewModel.swift */,
 			);
 			path = Task;
 			sourceTree = "<group>";
@@ -322,7 +322,7 @@
 				B588DB56228FC6CB0066CDFE /* TagListViewController.swift in Sources */,
 				B588DB4D228FBC490066CDFE /* TaskListViewController.swift in Sources */,
 				B565AD11228FE040001CAAB5 /* MockTodoDataSource.swift in Sources */,
-				B565AD0F228FDF5D001CAAB5 /* TaskViewModel.swift in Sources */,
+				B565AD0F228FDF5D001CAAB5 /* TaskListViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

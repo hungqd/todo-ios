@@ -13,7 +13,7 @@ class TaskListViewController: UITableViewController {
 
     private let disposeBag = DisposeBag()
 
-    var repository: TodoRepository?
+    var viewModel: TaskListViewModel?
 
     private var tasks = [Task]()
 
@@ -24,7 +24,7 @@ class TaskListViewController: UITableViewController {
         let addItem = UIBarButtonItem(title: "Add", style: .done, target: self, action: #selector(addTapped))
         navigationItem.rightBarButtonItem = addItem
 
-        repository?.getTasks().subscribe(onNext: { (tasks) in
+        viewModel?.getTasks().subscribe(onNext: { (tasks) in
             self.tasks.removeAll()
             self.tasks.append(contentsOf: tasks)
             self.tableView.reloadData()

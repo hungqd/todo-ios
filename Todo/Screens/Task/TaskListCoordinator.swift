@@ -18,7 +18,8 @@ class TaskListCoordinator : BaseCoordinator<Void> {
     init(parentViewController: UIViewController) {
         self.parentViewController = parentViewController
         let vc = TaskListViewController()
-        vc.repository = TodoRepository(localDataSource: MockTodoDataSource())
+        let repository = TodoRepository(localDataSource: MockTodoDataSource())
+        vc.viewModel = TaskListViewModel(repository: repository)
         viewController = UINavigationController(rootViewController: vc)
         viewController.tabBarItem = UITabBarItem(title: "Tasks", image: UIImage(named: "task-list"), selectedImage: nil)
     }

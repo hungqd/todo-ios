@@ -9,7 +9,7 @@
 import Foundation
 import RxSwift
 
-class TaskViewModel {
+class TaskListViewModel {
 
     private let repository: TodoRepository
 
