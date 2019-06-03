@@ -12,26 +12,18 @@ import RxSwift
 class MainCoordinator: BaseCoordinator<Void> {
 
     private let window: UIWindow
+    private var taskListCoordinator: TaskListCoordinator!
+    private var tagCoordinator: TagCoordinator!
 
     init(window: UIWindow) {
         self.window = window
     }
 
     override func start() -> Observable<Void> {
-        let taskListVC = TaskListViewController()
-        taskListVC.navigationItem.title = "Tasks"
-        taskListVC.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Add", style: .done, target: nil, action: nil)
-        taskListVC.repository = TodoRepository(localDataSource: MockTodoDataSource())
-        let taskListNC = UINavigationController(rootViewController: taskListVC)
-        taskListNC.tabBarItem = UITabBarItem(title: "Tasks", image: UIImage(named: "task-list"), selectedImage: nil)
-
-        let tagListVC = TagListViewController()
-        tagListVC.navigationItem.title = "Tags"
-        let tagListNC = UINavigationController(rootViewController: tagListVC)
-        tagListNC.tabBarItem = UITabBarItem(title: "Tags", image: UIImage(named: "tag"), selectedImage: nil)
-
         let mainVC = MainViewController()
-        mainVC.viewControllers = [taskListNC, tagListNC]
+        taskListCoordinator = TaskListCoordinator(parentViewController: mainVC)
+        tagCoordinator = TagCoordinator(parentViewController: mainVC)
+        mainVC.viewControllers = [taskListCoordinator.viewController, tagCoordinator.viewController]
         window.rootViewController = mainVC
         window.makeKeyAndVisible()
         return Observable.never()

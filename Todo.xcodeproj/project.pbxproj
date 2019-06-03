@@ -25,6 +25,8 @@
 		B588DB4E228FBC490066CDFE /* TaskListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B588DB4C228FBC490066CDFE /* TaskListViewController.xib */; };
 		B588DB56228FC6CB0066CDFE /* TagListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B588DB54228FC6CB0066CDFE /* TagListViewController.swift */; };
 		B588DB57228FC6CB0066CDFE /* TagListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B588DB55228FC6CB0066CDFE /* TagListViewController.xib */; };
+		B5CF0E4422A4C61800578D5F /* TaskListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CF0E4322A4C61800578D5F /* TaskListCoordinator.swift */; };
+		B5CF0E4622A4C83900578D5F /* TagCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CF0E4522A4C83900578D5F /* TagCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +50,8 @@
 		B588DB4C228FBC490066CDFE /* TaskListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TaskListViewController.xib; sourceTree = "<group>"; };
 		B588DB54228FC6CB0066CDFE /* TagListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagListViewController.swift; sourceTree = "<group>"; };
 		B588DB55228FC6CB0066CDFE /* TagListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TagListViewController.xib; sourceTree = "<group>"; };
+		B5CF0E4322A4C61800578D5F /* TaskListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListCoordinator.swift; sourceTree = "<group>"; };
+		B5CF0E4522A4C83900578D5F /* TagCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,6 +196,7 @@
 		B588DB4A228FBC140066CDFE /* Task */ = {
 			isa = PBXGroup;
 			children = (
+				B5CF0E4322A4C61800578D5F /* TaskListCoordinator.swift */,
 				B588DB4B228FBC490066CDFE /* TaskListViewController.swift */,
 				B588DB4C228FBC490066CDFE /* TaskListViewController.xib */,
 				B565AD0E228FDF5D001CAAB5 /* TaskViewModel.swift */,
@@ -202,6 +207,7 @@
 		B588DB4F228FC1120066CDFE /* Tag */ = {
 			isa = PBXGroup;
 			children = (
+				B5CF0E4522A4C83900578D5F /* TagCoordinator.swift */,
 				B588DB54228FC6CB0066CDFE /* TagListViewController.swift */,
 				B588DB55228FC6CB0066CDFE /* TagListViewController.xib */,
 			);
@@ -304,6 +310,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B50B2AEB228FDD2900C32F65 /* TodoDataSourceProtocol.swift in Sources */,
+				B5CF0E4622A4C83900578D5F /* TagCoordinator.swift in Sources */,
+				B5CF0E4422A4C61800578D5F /* TaskListCoordinator.swift in Sources */,
 				B50B2AE7228FDC2F00C32F65 /* Task.swift in Sources */,
 				B588DB3F228FB93E0066CDFE /* AppCoordinator.swift in Sources */,
 				B588DB41228FB9DD0066CDFE /* MainCoordinator.swift in Sources */,

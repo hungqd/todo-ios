@@ -19,6 +19,8 @@ class TaskListViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.title = "Tasks"
+
         let addItem = UIBarButtonItem(title: "Add", style: .done, target: self, action: #selector(addTapped))
         navigationItem.rightBarButtonItem = addItem
 

@@ -9,4 +9,9 @@
 import UIKit
 
 class TagListViewController: UIViewController {
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        navigationItem.title = "Tags"
+    }
 }
