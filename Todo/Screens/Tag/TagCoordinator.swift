@@ -26,4 +26,8 @@ class TagCoordinator : BaseCoordinator<Void> {
         parentViewContoller.present(viewController, animated: true, completion: nil)
         return Observable.never()
     }
+
+    deinit {
+        print("Deinit TagListCoordinator!")
+    }
 }

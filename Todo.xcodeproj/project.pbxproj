@@ -25,8 +25,15 @@
 		B588DB4E228FBC490066CDFE /* TaskListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B588DB4C228FBC490066CDFE /* TaskListViewController.xib */; };
 		B588DB56228FC6CB0066CDFE /* TagListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B588DB54228FC6CB0066CDFE /* TagListViewController.swift */; };
 		B588DB57228FC6CB0066CDFE /* TagListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B588DB55228FC6CB0066CDFE /* TagListViewController.xib */; };
+		B5A5737322A500B3002C2B4F /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5A5737222A500B3002C2B4F /* RxCocoa.framework */; };
+		B5A5737522A500EB002C2B4F /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5A5737422A500EB002C2B4F /* RxRelay.framework */; };
+		B5A5737722A50CFF002C2B4F /* CommonErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A5737622A50CFF002C2B4F /* CommonErrors.swift */; };
 		B5CF0E4422A4C61800578D5F /* TaskListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CF0E4322A4C61800578D5F /* TaskListCoordinator.swift */; };
 		B5CF0E4622A4C83900578D5F /* TagCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CF0E4522A4C83900578D5F /* TagCoordinator.swift */; };
+		B5CF0E4822A4CA0700578D5F /* TaskDetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CF0E4722A4CA0700578D5F /* TaskDetailCoordinator.swift */; };
+		B5CF0E4B22A4CA6600578D5F /* TaskDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CF0E4922A4CA6600578D5F /* TaskDetailViewController.swift */; };
+		B5CF0E4C22A4CA6600578D5F /* TaskDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5CF0E4A22A4CA6600578D5F /* TaskDetailViewController.xib */; };
+		B5CF0E4E22A4CA8100578D5F /* TaskDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CF0E4D22A4CA8100578D5F /* TaskDetailViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,8 +57,15 @@
 		B588DB4C228FBC490066CDFE /* TaskListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TaskListViewController.xib; sourceTree = "<group>"; };
 		B588DB54228FC6CB0066CDFE /* TagListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagListViewController.swift; sourceTree = "<group>"; };
 		B588DB55228FC6CB0066CDFE /* TagListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TagListViewController.xib; sourceTree = "<group>"; };
+		B5A5737222A500B3002C2B4F /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
+		B5A5737422A500EB002C2B4F /* RxRelay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxRelay.framework; path = Carthage/Build/iOS/RxRelay.framework; sourceTree = "<group>"; };
+		B5A5737622A50CFF002C2B4F /* CommonErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonErrors.swift; sourceTree = "<group>"; };
 		B5CF0E4322A4C61800578D5F /* TaskListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListCoordinator.swift; sourceTree = "<group>"; };
 		B5CF0E4522A4C83900578D5F /* TagCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagCoordinator.swift; sourceTree = "<group>"; };
+		B5CF0E4722A4CA0700578D5F /* TaskDetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDetailCoordinator.swift; sourceTree = "<group>"; };
+		B5CF0E4922A4CA6600578D5F /* TaskDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDetailViewController.swift; sourceTree = "<group>"; };
+		B5CF0E4A22A4CA6600578D5F /* TaskDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TaskDetailViewController.xib; sourceTree = "<group>"; };
+		B5CF0E4D22A4CA8100578D5F /* TaskDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDetailViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +74,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B588DB3A228FB7070066CDFE /* RxSwift.framework in Frameworks */,
+				B5A5737322A500B3002C2B4F /* RxCocoa.framework in Frameworks */,
+				B5A5737522A500EB002C2B4F /* RxRelay.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,6 +141,7 @@
 				B50B2AE2228FDBE900C32F65 /* Data */,
 				B588DB31228FB5060066CDFE /* Screens */,
 				B588DB30228FB4FB0066CDFE /* Library */,
+				B5A5737822A50E83002C2B4F /* Errors */,
 				B588DB32228FB5520066CDFE /* Resources */,
 				B588DB33228FB5650066CDFE /* Supporting Files */,
 			);
@@ -188,6 +205,8 @@
 		B588DB38228FB7070066CDFE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B5A5737422A500EB002C2B4F /* RxRelay.framework */,
+				B5A5737222A500B3002C2B4F /* RxCocoa.framework */,
 				B588DB39228FB7070066CDFE /* RxSwift.framework */,
 			);
 			name = Frameworks;
@@ -200,6 +219,10 @@
 				B588DB4B228FBC490066CDFE /* TaskListViewController.swift */,
 				B588DB4C228FBC490066CDFE /* TaskListViewController.xib */,
 				B565AD0E228FDF5D001CAAB5 /* TaskListViewModel.swift */,
+				B5CF0E4722A4CA0700578D5F /* TaskDetailCoordinator.swift */,
+				B5CF0E4922A4CA6600578D5F /* TaskDetailViewController.swift */,
+				B5CF0E4A22A4CA6600578D5F /* TaskDetailViewController.xib */,
+				B5CF0E4D22A4CA8100578D5F /* TaskDetailViewModel.swift */,
 			);
 			path = Task;
 			sourceTree = "<group>";
@@ -212,6 +235,14 @@
 				B588DB55228FC6CB0066CDFE /* TagListViewController.xib */,
 			);
 			path = Tag;
+			sourceTree = "<group>";
+		};
+		B5A5737822A50E83002C2B4F /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				B5A5737622A50CFF002C2B4F /* CommonErrors.swift */,
+			);
+			path = Errors;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -275,6 +306,7 @@
 			files = (
 				B588DB29228FB4BF0066CDFE /* LaunchScreen.storyboard in Resources */,
 				B588DB4E228FBC490066CDFE /* TaskListViewController.xib in Resources */,
+				B5CF0E4C22A4CA6600578D5F /* TaskDetailViewController.xib in Resources */,
 				B588DB49228FBB980066CDFE /* MainViewController.xib in Resources */,
 				B588DB57228FC6CB0066CDFE /* TagListViewController.xib in Resources */,
 				B588DB26228FB4BF0066CDFE /* Assets.xcassets in Resources */,
@@ -293,6 +325,8 @@
 			);
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxRelay.framework",
 			);
 			outputFileListPaths = (
 			);
@@ -319,10 +353,14 @@
 				B565AD0D228FDDE9001CAAB5 /* TodoRepository.swift in Sources */,
 				B588DB3D228FB7980066CDFE /* BaseCoordinator.swift in Sources */,
 				B588DB48228FBB980066CDFE /* MainViewController.swift in Sources */,
+				B5CF0E4822A4CA0700578D5F /* TaskDetailCoordinator.swift in Sources */,
+				B5CF0E4E22A4CA8100578D5F /* TaskDetailViewModel.swift in Sources */,
 				B588DB56228FC6CB0066CDFE /* TagListViewController.swift in Sources */,
 				B588DB4D228FBC490066CDFE /* TaskListViewController.swift in Sources */,
 				B565AD11228FE040001CAAB5 /* MockTodoDataSource.swift in Sources */,
 				B565AD0F228FDF5D001CAAB5 /* TaskListViewModel.swift in Sources */,
+				B5A5737722A50CFF002C2B4F /* CommonErrors.swift in Sources */,
+				B5CF0E4B22A4CA6600578D5F /* TaskDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

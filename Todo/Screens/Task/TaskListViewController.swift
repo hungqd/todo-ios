@@ -8,6 +8,7 @@
 
 import UIKit
 import RxSwift
+import RxCocoa
 
 class TaskListViewController: UITableViewController {
 
@@ -21,18 +22,21 @@ class TaskListViewController: UITableViewController {
         super.viewDidLoad()
         navigationItem.title = "Tasks"
 
-        let addItem = UIBarButtonItem(title: "Add", style: .done, target: self, action: #selector(addTapped))
+        let addItem = UIBarButtonItem(title: "Add", style: .done, target: self, action: nil)
         navigationItem.rightBarButtonItem = addItem
 
-        viewModel?.getTasks().subscribe(onNext: { (tasks) in
-            self.tasks.removeAll()
-            self.tasks.append(contentsOf: tasks)
-            self.tableView.reloadData()
-        }, onError: { (error) in
-            print("Error getting all task: \(error)")
-            self.tasks.removeAll()
-            self.tableView.reloadData()
-        }).disposed(by: disposeBag)
+        if let viewModel = viewModel {
+            addItem.rx.tap.bind(to: viewModel.addTask).disposed(by: disposeBag)
+            viewModel.getTasks().subscribe(onNext: { (tasks) in
+                self.tasks.removeAll()
+                self.tasks.append(contentsOf: tasks)
+                self.tableView.reloadData()
+            }, onError: { (error) in
+                print("Error getting all task: \(error)")
+                self.tasks.removeAll()
+                self.tableView.reloadData()
+            }).disposed(by: disposeBag)
+        }
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -46,9 +50,5 @@ class TaskListViewController: UITableViewController {
         cell.textLabel?.text = task.name
         cell.detailTextLabel?.text = task.description
         return cell
-    }
-
-    @objc func addTapped() {
-        print("Add button tapped")
     }
 }

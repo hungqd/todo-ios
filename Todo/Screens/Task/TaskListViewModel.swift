@@ -13,8 +13,14 @@ class TaskListViewModel {
 
     private let repository: TodoRepository
 
+    let addTask: AnyObserver<Void>
+    let onAddTask: Observable<Void>
+
     init(repository: TodoRepository) {
         self.repository = repository
+        let _addTask = PublishSubject<Void>()
+        addTask = _addTask.asObserver()
+        onAddTask = _addTask.asObservable()
     }
 
     func getTasks() -> Observable<[Task]>  {
